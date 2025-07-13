@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500, 700;
+  font-style: normal;
+}
+
+
+.fraunces {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+body {
+    font-size: 14px;
+    padding: 2rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.desktop-image {
+    display: none;
+}
+
+.mobile-image {
+    width: 100%;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+h1 {
+    font-family: "Fraunces", serif;
+}
+
+body > div.page > div > p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+}
+
+.price {
+    display: flex;
+    gap: 1rem;
+}
+
+.discount-price {
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+    color: hsl(158, 36%, 37%);
+}
+
+.original-price {
+    font-family: "Montserrat", sans-serif;
+    align-self: center;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.add-btn {
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    transition: all .3s linear;
+}
+
+.add-btn:hover {
+    background-color: hsl(158, 42%, 18%);
+    cursor: pointer;
+
+}
+
+
+@media screen and (min-width: 375px) {
+
+    .page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 700px;        
+    }
+
+    .desktop-image {
+        display: block;
+        width: 100%;
+        align-self: center;
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    .introduction {
+        align-self: center;
+    }
+}
